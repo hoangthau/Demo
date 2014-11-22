@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="DemoApp">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
@@ -8,36 +8,78 @@
   <link rel="stylesheet" href="styles/bootstrap.css">
   <link rel="stylesheet" href="styles/main.css">
 </head>
-<body>
+<body ng-controller="Demo as demo">
   <header>
     <div class="header-wrapper">
-      <img src="imgs/mario-icon.png" width="auto" height="40px">
-      <span class="text">Game Online</span>
-      <form class="form-inline" role="form">
-        <input class="form-control" placeholder="Please enter text ...">
-        <button class="btn btn-warning">SEARCH</button>
-      </form>
-      <div class="link">
-        <a href="">Film</a>
-        <a href="">Music</a>
-        <a href="">Pic</a>
-      </div>
-      <a href="" class="join-us">JOIN US</a>
+      <img src="imgs/angular.png" width="auto" height="40px">
+      <span class="text">Demo Everything</span>
     </div>
   </header>
   <div class="content-wrapper">
-    <div class="banner">
-      <img src="imgs/banner.jpg" width="100%" height="120px">
-    </div>
-    <nav></nav>
     <div class="main-content">
-      <section>
-        <h4 style="border-bottom: 1px solid #333">This is title</h4>
-        <article>
-          <img src="imgs/pic1.jpg" width="500px" height="auto">
-        </article>
-      </section>
+        <h3>jsPDF</h3>
+        <hr/>
+        <div id="customers">
+            <table class="table">
+                <thead>
+                <tr class='warning'>
+                    <th>Country</th>
+                    <th>Population</th>
+                    <th>Date</th>
+                    <th>Age</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Chinna</td>
+                    <td>1,363,480,000</td>
+                    <td>March 24, 2014</td>
+                    <td>19.1</td>
+                </tr>
+                <tr>
+                    <td>India</td>
+                    <td>1,241,900,000</td>
+                    <td>March 24, 2014</td>
+                    <td>17.4</td>
+                </tr>
+                <tr>
+                    <td>United States</td>
+                    <td>317,746,000</td>
+                    <td>March 24, 2014</td>
+                    <td>4.44</td>
+                </tr>
+                <tr>
+                    <td>Indonesia</td>
+                    <td>249,866,000</td>
+                    <td>July 1, 2013</td>
+                    <td>3.49</td>
+                </tr>
+                <tr>
+                    <td>Brazil</td>
+                    <td>201,032,714</td>
+                    <td>July 1, 2013</td>
+                    <td>2.81</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <button class="btn btn-primary" ng-click="demo.table2PDF()">Download</button>
+        <h3>pdfmake</h3>
+        <hr/>
+        <button class="btn btn-primary" ng-click="demo.table2PDF2()">Download</button>
     </div>
   </div>
+
+<script src="libs/angular.js"></script>
+<script src="libs/jquery-1.11.1.min.js"></script>
+<script src="js/main.js"></script>
+
+<script src="libs/jspdf.js"></script>
+<script src="libs/jspdf.debug.js"></script>
+<script src="libs/FileSaver.js"></script>
+
+<script src="libs/pdfmake.min.js"></script>
+<script src="libs/vfs_fonts.js"></script>
+
 </body>
 </html>
